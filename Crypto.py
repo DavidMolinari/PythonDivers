@@ -34,13 +34,30 @@ def occurence_lettre(message):
 # Fonction qui retourne sous forme d'un tableau, le nombre d'occurencs
 # de toutes les lettres de l'alphabet
 
+def occurence(message):
+    a = "abcdefghijklmnopqrstuvwxyz"
+    A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    tab = [0]*len(a)
+    n = len(message)
+    for i in range(0, n):
+        for j in range (0, len(a)):
+            if message[i] == a[j] or message[i] == A[j]:
+                tab[j] = tab[j]+1              
+                
+    print(tab)
 
-''' Programme principal '''
-print("Occurences de la lettre a dans J'aime les ananas :")
+
+
+
+''' Programme principal  '''
+
+print("Occurences de la lettre a dans : J'aime les ananas :")
 occ1 = occurence_lettre("J'aime les ananas !")
-print("Occurences de la lettre a Avez vous appris votre cours ?  :")
+print("Occurences de la lettre a dans : Avez vous appris votre cours ?  :")
 occ2 = occurence_lettre('Avez vous appris votre cours ? ')
 
 
+print("Occurence de toutes les lettres de d'alphabet")
+occurence("Bonjour, comment allez vous ?")
 
 
