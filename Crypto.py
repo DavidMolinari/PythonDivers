@@ -66,7 +66,16 @@ def Cesar(message):
     print(newA)
 
 
-
+def meh(message):
+    a = "abcdefghijklmnopqrstuvwxyz"
+    nouveau = ""
+    nouvmeh = 0
+    for i in range(0, len(message)):
+        for j in range (0, len(a)):
+            if message[i] == a[j]:
+                nouvmeh = (j + 3)%26
+                nouveau = a[nouvmeh]
+        print (nouveau)
 
 ''' Programme principal  '''
 
