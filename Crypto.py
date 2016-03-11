@@ -38,13 +38,32 @@ def occurence(message):
     a = "abcdefghijklmnopqrstuvwxyz"
     A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     tab = [0]*len(a)
+    meh = 0
     n = len(message)
     for i in range(0, n):
         for j in range (0, len(a)):
             if message[i] == a[j] or message[i] == A[j]:
                 tab[j] = tab[j]+1              
-                
+    for k in range(0, len(tab)):
+        if tab[k] >= meh:
+            meh = tab[k]
     print(tab)
+    print(meh)
+
+
+
+    
+''' Codage Affine '''
+
+def Cesar(message):
+    a = "abcdefghijklmnopqrstuvwxyz"
+    indice = 0
+    nouvelIndice = 0
+    newA = ""
+    for i in range(0, len(message)):
+        nouvelIndice = (i + 3)%26
+        newA = newA + a[nouvelIndice]
+    print(newA)
 
 
 
@@ -58,6 +77,11 @@ occ2 = occurence_lettre('Avez vous appris votre cours ? ')
 
 
 print("Occurence de toutes les lettres de d'alphabet")
-occurence("Bonjour, comment allez vous ?")
+occurence("Baaaaaaaaaaonjour, comment allez vous ?")
+
+
+Cesar("aaaaaaa")
+
+
 
 
